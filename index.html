@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Tasks | Premium To-Do App</title>
+    <meta name="description" content="A sleek, modern task management application with glassmorphism design and real-time tracking.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1>Stellar Tasks</h1>
+            <p id="current-date"></p>
+        </header>
+
+        <section class="input-section glass">
+            <div class="input-group">
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
+                <button id="add-task-btn">
+                    <span class="plus-icon">+</span> Add Task
+                </button>
+            </div>
+        </section>
+
+        <section class="tabs-section">
+            <div class="tabs-container glass">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="pending">Pending</button>
+                <button class="tab-btn" data-tab="completed">Completed</button>
+            </div>
+        </section>
+
+        <section class="lists-container">
+            <div id="task-list" class="task-list">
+                <!-- Tasks will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for Editing -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content glass">
+            <h2>Edit Task</h2>
+            <input type="text" id="edit-task-input">
+            <div class="modal-actions">
+                <button id="cancel-edit" class="btn-secondary">Cancel</button>
+                <button id="save-edit" class="btn-primary">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
